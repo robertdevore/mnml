@@ -35,6 +35,11 @@ Looking for more details behind the theme that aren't included in this readme do
 1. Upload the `mnml-theme` directory to your `wp-content/themes` directory
 1. Activate the theme on the WordPress Themes dashboard
 
+## Screenshots
+
+1. Default theme design
+![default theme design](http://www.robertdevore.com/wp-content/uploads/2015/09/mnml-screenshot.jpg)
+
 ## Changelog
 
 ### 1.0.0
