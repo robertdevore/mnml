@@ -4,7 +4,7 @@ MNML
 **Tags:** theme, templates  
 **Requires at least:** 3.4  
 **Tested up to:** 4.3.0  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.0.1  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Looking for more details behind the theme that aren't included in this readme do
 ![default theme design](http://www.robertdevore.com/wp-content/uploads/2015/09/mnml-screenshot.jpg)
 
 ## Changelog
+
+### 1.0.1
+* fixed copyright input in the customizer from stripping html tags
 
 ### 1.0.0
 * Initial release
