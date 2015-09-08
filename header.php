@@ -28,12 +28,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 site-branding">
+				<?php if ( get_theme_mod( 'mnml_logo' ) )  { ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_theme_mod( 'mnml_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>"></a>
+				<?php } else { ?>
 					<?php if ( is_front_page() && is_home() ) : ?>
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<?php else : ?>
 						<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
 					<?php endif; ?>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+				<?php } // end mnml_logo check ?>
 				</div><!-- .site-branding -->
 			</div><!-- /.row -->
 			<div class="row">

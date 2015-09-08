@@ -4,7 +4,7 @@ MNML
 **Tags:** theme, templates  
 **Requires at least:** 3.4  
 **Tested up to:** 4.3.0  
-**Stable tag:** 1.0.2  
+**Stable tag:** 1.0.3  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,9 @@ Looking for more details behind the theme that aren't included in this readme do
 ![default theme design](http://www.robertdevore.com/wp-content/uploads/2015/09/mnml-screenshot.jpg)
 
 ## Changelog
+
+### 1.0.3
+* added logo upload option in theme customizer
 
 ### 1.0.2
 * added page template for full width (no sidebar)

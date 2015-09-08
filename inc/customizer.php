@@ -6,17 +6,41 @@
  * @param      object    $wp_customize    The WordPress Theme Customizer
  * @package    MNML
  * @since      1.0.0
- * @version    1.0.0
+ * @version    1.0.1
  */
 
 function mnml_register_theme_customizer( $wp_customize ) {
+
+	/*-----------------------------------------------------------*
+	 * Site Title (logo) & Tagline section
+	 *-----------------------------------------------------------*/
+	// section adjustments
+	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title (Logo) & Tagline', 'mnml' );
+	$wp_customize->get_section( 'title_tagline' )->priority = 10;
+	// site title
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_control( 'blogname' )->priority = 10;
+	// site tagline
+	$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';	
+	$wp_customize->get_control( 'blogdescription' )->priority = 20;
+	// logo uploader
+	$wp_customize->add_setting( 'mnml_logo', array( 'default' => null ) );
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mnml_logo', array(
+		'label'     => __( 'Custom Site Logo', 'mnml' ),
+		'section'   => 'title_tagline',
+		'settings'  => 'mnml_logo',
+		'priority'  => 30
+	) ) );
 	
+	/*-----------------------------------------------------------*
+	 * Color options
+	 *-----------------------------------------------------------*/
 	/* Link Color */
 	$wp_customize->add_setting(
 		'mnml_main_color',
 		array(
 			'default'     		 => '#0085a1',
-			'sanitize_callback'  => 'mnml_sanitize_input',
+			'sanitize_callback'  	 => 'mnml_sanitize_input',
 			'transport'   		 => 'refresh'
 		)
 	);
