@@ -185,5 +185,41 @@ function add_class_to_excerpt( $excerpt ) {
 add_filter( "the_excerpt", "add_class_to_excerpt" );
 
 /**
- * Changing avatar size in comments
+ * Using logo upload from customizer to change login page logo
  */
+
+if ( get_theme_mod( 'mnml_logo' ) )  {
+
+// Change login page logo image to the logo uploaded in the customizer	
+function mnml_login_logo() {
+	
+	list($width,$height) = getimagesize(get_theme_mod( "mnml_logo" ));
+
+	echo '<style type="text/css">
+		#login {
+			width: '. $width .'px !important;
+		}
+		h1 a {
+			background-image:url('. get_theme_mod( "mnml_logo" ) .') !important;
+			background-size: '. $width .'px !important;
+			width: '. $width .'px !important;
+			height: '. $height .'px !important;
+		}
+	</style>';
+}
+
+add_action('login_head', 'mnml_login_logo');
+
+// Change login page logo link to the website home page
+function mnml_login_logo_url() {
+    return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'mnml_login_logo_url' );
+
+// Change login page logo title to the website name
+function mnml_login_logo_url_title() {
+    return get_bloginfo( 'name' );
+}
+add_filter( 'login_headertitle', 'mnml_login_logo_url_title' );
+
+} // if get_theme_mod('mnml_logo')
