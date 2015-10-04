@@ -1,4 +1,4 @@
-# Copyright (C) 2015 Automattic
+# Copyright (C) 2015 Devio Digital
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
@@ -9,8 +9,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Robert DeVore <me@robertdevore.com>\n"
+"Language-Team: Robert DeVore <me@robertdevore.com>\n"
 
 #: 404.php:15
 #@ _s
