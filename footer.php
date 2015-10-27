@@ -16,6 +16,11 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
+			<?php if ( is_active_sidebar( 'footer' ) ) { ?>
+			<div class="row widgets">
+				<?php dynamic_sidebar( 'footer' ); ?>
+			</div><!-- /.row.widgets -->
+			<?php } ?>
 			<div class="row">
 				<div class=" col-lg-12 site-info">
 					<div class="copyright">
