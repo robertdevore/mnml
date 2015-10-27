@@ -461,6 +461,38 @@ header.page-header.archive {
 # Footer
 --------------------------------------------------------------*/
 
+.site-footer .col-lg-3 {
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 0;
+	padding: 10px;
+}
+
+.site-footer .col-lg-3:first-child {
+	padding-left: 0;
+}
+
+.site-footer .col-lg-3:last-child {
+	padding-right: 0;
+}
+
+.site-footer aside ul {
+	line-height: 1.15;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-footer aside ul li {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+}
+
+.site-footer aside ul li:last-child {
+	border-bottom: 0;
+}
+
 .site-footer .col-lg-12 {
 	padding: 0;
 }
