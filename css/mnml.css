@@ -614,6 +614,18 @@ img.avatar {
 		padding-right: 15px;
 	}
 	
+	.site-footer .col-lg-3 {
+		padding: 15px;
+	}
+	
+	.site-footer .col-lg-3:first-child {
+		padding-left: 15px;
+	}
+	
+	.site-footer .col-lg-3:last-child {
+		padding-right: 15px;
+	}
+	
 	.site-footer .col-lg-12 {
 		padding-left: 15px;
 		padding-right: 15px;
