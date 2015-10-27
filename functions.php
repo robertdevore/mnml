@@ -109,6 +109,15 @@ function mnml_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer', 'mnml' ),
+		'id'            => 'footer',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget col-lg-3 %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'mnml_widgets_init' );
 
