@@ -615,7 +615,10 @@ img.avatar {
 	}
 	
 	.site-footer .col-lg-3 {
-		padding: 15px;
+		float: left;
+		padding: 0 15px;
+		margin-bottom: 1.5em;
+		width: 100%;
 	}
 	
 	.site-footer .col-lg-3:first-child {
