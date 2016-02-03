@@ -3,8 +3,8 @@ MNML
 **Contributors:** deviodigital  
 **Tags:** theme, templates  
 **Requires at least:** 3.4  
-**Tested up to:** 4.4.0  
-**Stable tag:** 1.0.5  
+**Tested up to:** 4.4.2  
+**Stable tag:** 1.0.6  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,10 +37,19 @@ Looking for more details behind the theme that aren't included in this readme do
 
 ## Screenshots
 
-1. Default theme design
-![default theme design](http://www.robertdevore.com/wp-content/uploads/2015/09/mnml-screenshot.jpg)
+### Default theme design
+
+![Default Theme Design](http://www.robertdevore.com/wp-content/uploads/2015/09/mnml-screenshot.jpg)
+
+### Image options
+
+![Theme customizer options](http://www.robertdevore.com/wp-content/uploads/2016/02/mnml-version-1-0-5-screenshot.jpg)
 
 ## Changelog
+
+### 1.0.6
+* included options in Customizer: Black and white images (yes/no), Color image on hover (yes/no), Featured image links to post (yes/no), **see screenshots**
+* CSS updates for new customizer options
 
 ### 1.0.5
 * added support for footer widgets

@@ -1,7 +1,8 @@
 /*!
  * MNML v1.0.0 (http://deviodigtital.com/demo/mnml)
- * Copyright 2015 Devio Digital
- * Licensed under GPL 2.0 
+ * Copyright 2015-2016 Devio Digital
+ * Licensed under GPL 2.0
+ * Last updated: v1.0.6
  */
 
 body {
@@ -135,6 +136,11 @@ th {
 
 pre {
 	margin-bottom: 28px;
+}
+
+img {
+    -webkit-transition: all .3s ease;
+            transition: all .3s ease;
 }
 
 /*--------------------------------------------------------------
@@ -624,7 +630,7 @@ img.avatar {
 	.site-footer .col-lg-3:first-child {
 		padding-left: 15px;
 	}
-	
+
 	.site-footer .col-lg-3:last-child {
 		padding-right: 15px;
 	}

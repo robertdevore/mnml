@@ -15,7 +15,7 @@ function mnml_register_theme_customizer( $wp_customize ) {
 	 * Site Title (logo) & Tagline section
 	 *-----------------------------------------------------------*/
 	// section adjustments
-	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title (Logo) & Tagline', 'mnml' );
+	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title, Logo & Tagline', 'mnml' );
 	$wp_customize->get_section( 'title_tagline' )->priority = 10;
 	// site title
 	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
@@ -26,7 +26,7 @@ function mnml_register_theme_customizer( $wp_customize ) {
 	// logo uploader
 	$wp_customize->add_setting( 'mnml_logo', array( 'default' => null ) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'mnml_logo', array(
-		'label'     => __( 'Custom Site Logo', 'mnml' ),
+		'label'     => __( 'Site Logo', 'mnml' ),
 		'section'   => 'title_tagline',
 		'settings'  => 'mnml_logo',
 		'priority'  => 30
@@ -55,15 +55,81 @@ function mnml_register_theme_customizer( $wp_customize ) {
 			)
 		)
 	);
-	
+
 	/*-----------------------------------------------------------*
 	 * Defining our own 'Display Options' section
 	 *-----------------------------------------------------------*/
 	$wp_customize->add_section(
 		'mnml_display_options',
 		array(
-			'title'     => 'Copyright',
+			'title'     => 'Display Options',
 			'priority'  => 40
+		)
+	);
+
+	/* Black and White Images */
+	$wp_customize->add_setting(
+		'mnml_blackandwhite',
+		array(
+			'default'            => 'no',
+			'sanitize_callback'  => 'mnml_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'mnml_blackandwhite',
+		array(
+			'section'  => 'mnml_display_options',
+			'label'    => 'Black and white images?',
+			'type'     => 'radio',
+			'choices'  => array(
+				'yes'  => 'Yes',
+				'no'   => 'No'
+			)
+		)
+	);
+
+	/* Color Hover Images */
+	$wp_customize->add_setting(
+		'mnml_blackandwhite_hover',
+		array(
+			'default'            => 'no',
+			'sanitize_callback'  => 'mnml_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'mnml_blackandwhite_hover',
+		array(
+			'section'  => 'mnml_display_options',
+			'label'    => 'Color images when hovered?',
+			'type'     => 'radio',
+			'choices'  => array(
+				'yes'  => 'Yes',
+				'no'   => 'No'
+			)
+		)
+	);
+
+	/* Make Featured Images Clickable */
+	$wp_customize->add_setting(
+		'mnml_featuredimage_clickable',
+		array(
+			'default'            => 'no',
+			'sanitize_callback'  => 'mnml_sanitize_input',
+			'transport'          => 'refresh'
+		)
+	);
+	$wp_customize->add_control(
+		'mnml_featuredimage_clickable',
+		array(
+			'section'  => 'mnml_display_options',
+			'label'    => 'Make featured images clickable to post?',
+			'type'     => 'radio',
+			'choices'  => array(
+				'yes'  => 'Yes',
+				'no'   => 'No'
+			)
 		)
 	);
 
@@ -221,6 +287,21 @@ function mnml_customizer_css() {
 			background: <?php echo get_theme_mod( 'mnml_main_color' ); ?>;
 			border-color: <?php echo get_theme_mod( 'mnml_main_color' ); ?>;
 		}
+		<?php if ( get_theme_mod( 'mnml_blackandwhite' ) !== 'no' ) { ?>
+		img {
+			filter: grayscale(100%);
+			-webkit-filter: grayscale(100%);  /* For Webkit browsers */
+			filter: gray;  /* For IE 6 - 9 */
+			-webkit-transition: all .6s ease;  /* Transition for Webkit browsers */
+		}
+		<?php } ?>
+		<?php if ( get_theme_mod( 'mnml_blackandwhite_hover' ) !== 'no' ) { ?>
+		img:hover{ 
+			filter: grayscale(0%);
+			-webkit-filter: grayscale(0%);
+			filter: none;
+		}
+		<?php } ?>
 
 	</style>
 <?php

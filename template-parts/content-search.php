@@ -21,7 +21,15 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php if ( has_post_thumbnail() ) { the_post_thumbnail('small-image'); } ?>
+		<?php if ( has_post_thumbnail() ) { ?>
+			<?php if ( get_theme_mod( 'mnml_featuredimage_clickable' ) !== 'no' ) { ?>
+			<a href="<?php the_permalink(); ?>">
+			<?php } ?>
+			<?php echo the_post_thumbnail('small-image'); ?>
+			<?php if ( get_theme_mod( 'mnml_featuredimage_clickable' ) !== 'no' ) { ?>
+			</a>
+			<?php } ?>
+		<?php } ?>
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 </article><!-- #post-## -->
