@@ -4,7 +4,7 @@ MNML
 **Tags:** theme, templates  
 **Requires at least:** 3.4  
 **Tested up to:** 4.4.2  
-**Stable tag:** 1.0.6  
+**Stable tag:** 1.0.7  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
 

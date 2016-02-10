@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.0.7
+* added Builder page template so you can now use a Page Builder plugin to customize your pages more
+
 ### 1.0.6
 * included options in Customizer: Black and white images (yes/no), Color image on hover (yes/no), Featured image links to post (yes/no), **see screenshots**
 * CSS updates for new customizer options
